@@ -30,7 +30,7 @@ function redirectToEngine([url, queryParamKey], query, callback) {
 }
 
 exports.handler = (event, context, callback) => {
-  console.log(event);
+  console.log(event, context);
 
   const { queryStringParameters } = event;
   const query = queryStringParameters['q'];
