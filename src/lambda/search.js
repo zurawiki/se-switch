@@ -9,7 +9,7 @@ const BAIDU_ENGINE = ['https://www.baidu.com/s', 'wd']
 const BING_ENGINE = ['https://cn.bing.com/search', 'q']
 const GOOGLE_ENGINE = ['https://www.google.com/search', 'q']
 
-const dbBuffer = fs.readFileSync(path.join('data', 'GeoLite2-Country.mmdb'));
+const dbBuffer = require('buffer-loader!../../data/GeoLite2-Country.mmdb');
 // Load synchronously
 const countryLookup = new MMDBReader(dbBuffer);
 
