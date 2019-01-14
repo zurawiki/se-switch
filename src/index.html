@@ -5,26 +5,21 @@
   <meta charset="UTF-8">
   <title>Rozu Search</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono" rel="stylesheet">
   <link href="/normalize.css" rel="stylesheet">
   <link href="/styles.css" rel="stylesheet">
 </head>
 
 <body>
   <h1>Rozu Search</h1>
-
   <p>Automatically picks the best search engine for the job.</p>
 
   <form action="/.netlify/functions/search" method="GET" role="search">
     <input maxlength="2048" name="q" type="search" aria-autocomplete="both" aria-haspopup="false" autocapitalize="off"
       autocomplete="off" autocorrect="off" role="combobox" spellcheck="false" title="Search" value="" aria-label="Search"
       autofocus required>
-
     <button aria-label="Search" type="submit">Search</button>
   </form>
 
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/prism.min.js"></script>
   <script src="main.js"></script>
 </body>
-
 </html>
