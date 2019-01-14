@@ -11,7 +11,7 @@
     "start:server": "netlify-lambda serve src/lambda -c webpack.server.js",
     "build": "yarn build:client && yarn build:server",
     "build:client": "webpack --mode production --config webpack.client.js",
-    "build:server": "netlify-lambda build src/lambda"
+    "build:server": "cp -r data dist/server && netlify-lambda build src/lambda"
   },
   "author": "imorente",
   "license": "MIT",
