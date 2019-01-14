@@ -6,13 +6,18 @@
   --accentColor: #20639b;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: var(--fontFamilySans);
   font-size: var(--baseFontSize);
   line-height: 1.5;
-  max-width: 30em;
-  padding: 1em;
-  margin: auto;
+  max-width: 30rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 0 auto;
   background: white;
   color: var(--textColor);
   counter-reset: example;
@@ -20,33 +25,31 @@ body {
   -webkit-font-smoothing: antialiased;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 30rem;
   justify-content: center;
+  min-height: 100%;
+  min-height: 100vh;
 }
-
-
 
 h1 {
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 500;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
-
 p {
-  margin: 1em 0 2em;
+  margin: 1rem 0 2rem;
 }
 
 input {
   display: inline-block;
   box-sizing: border-box;
-  margin-top: 0.5em;
   margin-right: 1rem;
-  padding: 0 0.5em;
-  height: 2.5em;
-  line-height: 2.5;
+  padding: 0 0.5rem;
+  height: 2.5rem;
+  line-height: 1;
   width: 100%;
   border: 2px solid var(--borderColor);
   border-radius: 4px;
@@ -66,11 +69,11 @@ button,
   background: var(--accentColor);
   color: white;
   border-radius: 4px;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 500;
-  height: 2.5em;
+  height: 2.5rem;
   line-height: 2.5;
-  padding: 0 1em;
+  padding: 0 1rem;
   text-align: center;
   cursor: pointer;
   outline: none;
@@ -92,4 +95,5 @@ button:active {
 form {
   display: flex;
   align-items: end;
+  margin-bottom: 4rem;
 }
