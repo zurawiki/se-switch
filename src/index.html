@@ -2,31 +2,24 @@
 <html lang="en">
 
 <head>
-  <title>Netlify Functions Examples</title>
+  <title>Rozu Search</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono" rel="stylesheet">
   <link href="/normalize.css" rel="stylesheet">
   <link href="/styles.css" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Netlify Functions Examples</h1>
-  <p>
-    Hi there! This is a playground to test out
-    <a href="https://www.netlify.com/docs/functions">Netlify’s Lambda Functions</a>.
-  </p>
+  <h1>Rozu Search</h1>
 
-  <article>
-    <h2>Search Engine</h2>
-    <p>Automatically picks the search engine based on query and client IP.</p>
-    <h3>Try it out</h3>
-    <form action="/.netlify/functions/search" method="GET">
-      <p>
-        <label>What’s your query?<br /><input type="search" name="q"></label>
-      </p>
-      <p><button type="submit">Search</button></p>
-    </form>
-  </article>
-  </article>
+  <p>Automatically picks the best search engine for the job.</p>
+
+  <form action="/.netlify/functions/search" method="GET" role="search">
+    <input maxlength="2048" name="q" type="search" aria-autocomplete="both" aria-haspopup="false" autocapitalize="off"
+      autocomplete="off" autocorrect="off" role="combobox" spellcheck="false" title="Search" value="" aria-label="Search"
+      autofocus required>
+
+    <button aria-label="Search" type="submit">Search</button>
+  </form>
 
   <script src="https://cdn.jsdelivr.net/npm/prismjs@1.14.0/prism.min.js"></script>
   <script src="main.js"></script>
