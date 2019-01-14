@@ -9,18 +9,19 @@ const GOOGLE_ENGINE = ['https://www.google.com/search', 'q']
 
 const GEOIP_DB = path.join('data', 'GeoLite2-Country.mmdb');
 
-
-
-
 /** Memoize loading of geoIP library */
 // let countryLookup = maxmind.openSync(GEOIP_DB);
-let countryLookup = null;
+let countryLookup = { get: () => null };
 
 function getEngine(searchQuery, ipAddress) {
 
   // To debug your problem
   console.log('TO DEBUG PROBLEM START');
   console.log(path.resolve(GEOIP_DB));
+  console.log('TO DEBUG PROBLEM START 2');
+  console.log(fs.readdirSync('.'));
+  console.log('TO DEBUG PROBLEM START 3');
+  console.log(fs.readdirSync('data'));
   console.log('TO DEBUG PROBLEM END');
 
 
@@ -30,7 +31,7 @@ function getEngine(searchQuery, ipAddress) {
   }
 
   // ip is China
-  const country = countryLookup && ipAddress ? countryLookup.get(ipAddress) : null;
+  const country = ipAddress ? countryLookup.get(ipAddress) : null;
   console.log(ipAddress, country)
   if (country && country.country && country.country.iso_code && country.country.iso_code === 'CN') {
     return BING_ENGINE;
