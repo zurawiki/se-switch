@@ -3,6 +3,6 @@
 <Description>Search ZuriSearch</Description>
 <InputEncoding>UTF-8</InputEncoding>
 <!-- <Image width="16" height="16" type="image/x-icon">https://github.com/favicon.ico</Image> -->
-<Url type="text/html" method="get" template="https://search.zura.wiki/.netlify/functions/search?q={searchTerms}&ref=opensearch"/>
+<Url type="text/html" method="get" template="https://search.zura.wiki/.netlify/functions/search?q={searchTerms}"/>
 <moz:SearchForm>https://search.zura.wiki/</moz:SearchForm>
 </OpenSearchDescription>
