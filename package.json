@@ -1,11 +1,9 @@
 {
-  "name": "@zurawiki/se-search",
+  "name": "@zurawiki/zuri-search",
   "version": "0.1.1",
   "description": "Rod makes a search engine",
   "private": true,
   "scripts": {
-    "docs": "node generate-readme.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently 'yarn start:client' 'yarn start:server'",
     "start:client": "mkdir -p dist/client && cp -r static/ dist/client && webpack-dev-server --mode development --hot --config webpack.client.js",
     "start:server": "netlify-lambda serve src/lambda -c webpack.server.js",
