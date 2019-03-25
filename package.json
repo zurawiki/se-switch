@@ -1,19 +1,19 @@
 {
-  "name": "netlify-functions-example",
-  "version": "0.1.0",
-  "description": "Irene’s playground for learning how to use Netlify Lambda Functions",
+  "name": "@zurawiki/se-search",
+  "version": "0.1.1",
+  "description": "Rod makes a search engine",
   "private": true,
   "scripts": {
     "docs": "node generate-readme.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently 'yarn start:client' 'yarn start:server'",
-    "start:client": "webpack-dev-server --mode development --hot --config webpack.client.js",
+    "start:client": "mkdir -p dist/client && cp -r static/ dist/client && webpack-dev-server --mode development --hot --config webpack.client.js",
     "start:server": "netlify-lambda serve src/lambda -c webpack.server.js",
     "build": "yarn build:client && yarn build:server",
-    "build:client": "webpack --mode production --config webpack.client.js",
+    "build:client": "mkdir -p dist/client && cp -r static/ dist/client && webpack --mode production --config webpack.client.js",
     "build:server": "netlify-lambda build src/lambda"
   },
-  "author": "imorente",
+  "author": "Roger Zurawicki <roger@zura.wiki>",
   "license": "MIT",
   "devDependencies": {
     "babel-loader": "^8.0.5",
